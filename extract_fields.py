@@ -90,7 +90,7 @@ def get_email(email: str):
 
 # get name from keyword:
 
-def get_name_from_keyword(name):
+def get_name_from_keyword(name: str):
      if(re.findall(r'NAME',name.upper())):
         name = name.upper()
         name = name.replace('NAME','') ## Remove the Word "NAME"
