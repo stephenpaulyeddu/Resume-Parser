@@ -57,7 +57,7 @@ def get_mobile_number(mobile: str):
 
 # Identifying email
 
-#get emails from text as list
+#get emails from text as string
 def get_email(email: str):
     try:
         # find all the combinations of email in the FORM -  "any_string@any_string.any_string"
@@ -81,6 +81,6 @@ def get_email(email: str):
         ## Email can contain ["Email:any_string@any_string.any_string","any_string@any_string.any_string"] - so we sort it by length and take the first object.
         emails.sort(key = len)
         
-        return emails
+        return emails[0]
     except:
         pass
