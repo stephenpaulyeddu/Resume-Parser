@@ -84,3 +84,25 @@ def get_email(email: str):
         return emails[0]
     except:
         pass
+
+
+#############################################################################################################################
+
+# get name from keyword:
+
+def get_name_from_keyword(name):
+     if(re.findall(r'NAME',name.upper())):
+        name = name.upper()
+        name = name.replace('NAME','') ## Remove the Word "NAME"
+        
+        updated_name = ' '
+        for j in name:
+            if(re.findall(r'[a-zA-Z]', j) or j == ' '):
+                updated_name += j  ## Update the name if we find only alphabets, This will remove characters :,- etc
+            
+        updated_name = updated_name.strip() # Strip for additional spaces.
+    
+        if name != '':
+            return updated_name.title()
+        else:
+            return None

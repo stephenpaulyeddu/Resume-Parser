@@ -5,3 +5,6 @@ print(a)
 
 b = extract_fields.get_email(" Email: i_am_an_email@gmail.com") # get email from any text
 print(b)
+
+c = extract_fields.get_name_from_keyword("Name - John Cena") # this returns name if keyword Name is present
+print(c)
