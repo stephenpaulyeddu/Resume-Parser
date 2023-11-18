@@ -106,3 +106,6 @@ def get_name_from_keyword(name: str):
             return updated_name.title()
         else:
             return None
+
+def get_city_from_string(city: str):
+    city = city.strip()
